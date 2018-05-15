@@ -1,0 +1,10 @@
+http://watchus-001-site1.smarterasp.net/api/Contacts/RemindContact
+
+{
+  "RequestorId":"F09C7105-ADFB-4CC7-9F09-D21F50909A77",
+  "EventId":"ba6ca355-8bf7-496d-ae89-8898094fe1c5",
+  "RequestorName":"ssk",
+  "ContactNumbersForRemind": [
+                                 "9886567865", "7338335475"
+                            ]
+}

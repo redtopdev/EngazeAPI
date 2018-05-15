@@ -1,0 +1,7 @@
+get event
+
+1. User list needs to be added - done
+2. All duration will be in seconds. it is coming null now
+3. requestor id is coming null can be removed, not required
+4. if an event has un registered users, then save mobile number to new table with eventid so that in future if they register we can fetch event information
+5. Bug in deserialization - done

@@ -1,0 +1,29 @@
+http://watchus-001-site1.smarterasp.net/api/Contacts/GetRegisteredContacts
+
+{
+  "RequestorId":"35B2141E-1531-4B4F-9F80-081363B69ED8",
+  "ContactList": [
+                 
+                  "+919511533225", "+919611633226","+9119611633226"
+                ]
+}
+
+
+
+DB
+
+
+exec ws_spGetRegisteredContacts 
+'<?xml version="1.0" encoding="utf-8"?>
+<ContactsRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <RequestorId>35B2141E-1531-4B4F-9F80-081363B69ED8</RequestorId>
+  <ContactList>
+	<string>+919611633226</string>
+	<string>09511633226</string>
+	<string>9411633226</string>
+  </ContactList>
+</ContactsRequest>'
+
+
+Result:
+{"Id":null,"Status":true,"ErrorMessage":"","ListOfEvents":null,"ListOfUserLocation":null,"ListOfRegisteredContacts":[{"UserId":"35B2141E-1531-4B4F-9F80-081363B69ED8","MobileNumber":"9611633226"},{"UserId":"85003F47-3BFC-4050-BE70-AEF16EE9139E","MobileNumber":"9511533225"}]}

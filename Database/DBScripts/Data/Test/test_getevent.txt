@@ -1,0 +1,8 @@
+http://watchus-001-site1.smarterasp.net/api/Event/Get
+
+accept: application\json, content-type: application\json
+
+
+{
+   "RequestorId":"F09C7105-ADFB-4CC7-9F09-D21F50909A77"
+}

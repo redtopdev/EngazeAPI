@@ -1,0 +1,24 @@
+exec ws_spGetUserLocation '<?xml version="1.0" encoding="utf-8"?>
+<EventLocationRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <EventId>D5F06588-FB36-4E5B-B20C-48A5E1948D14</EventId>
+  <RequestorId>35B2141E-1531-4B4F-9F80-081363B69ED8</RequestorId>
+</EventLocationRequest>'
+
+
+
+
+<ArrayOfUserLocation><UserLocation><UserId>F679E4C0-6C20-4140-905E-950B8A381576</UserId><ProfileName>asagar</ProfileName><Latitude>12.968599</Latitude><Longitude>77.594751</Longitude><IsDeleted>0</IsDeleted><CreatedOn>2015-05-22T10:31:32.940</CreatedOn><ETA>1.02</ETA><ArrivalStatus>0</ArrivalStatus></UserLocation><UserLocation><UserId>7DC3D9D0-C7AE-4EEC-8F3F-D9F964A4A33A</UserId><ProfileName>ssk</ProfileName><Latitude>12.965024</Latitude><Longitude>77.597026</Longitude><IsDeleted>0</IsDeleted><CreatedOn>2015-05-22T10:31:32.940</CreatedOn><ETA>1.01</ETA><ArrivalStatus>0</ArrivalStatus></UserLocation></ArrayOfUserLocation>
+
+
+Upload Location
+
+ exec ws_spAddUserLocation '<?xml version="1.0" encoding="utf-8"?>
+           <UserLocation xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+            <UserId>7DC3D9D0-C7AE-4EEC-8F3F-D9F964A4A33A</UserId>
+              <Latitude>12.765024</Latitude>
+                <Longitude>77.497026</Longitude>
+                  <IsDeleted>false</IsDeleted> 
+                   <CreatedOn>0001-01-01T00:00:00</CreatedOn>  
+                   <ETA>1.0</ETA> 
+                    <ArrivalStatus>0</ArrivalStatus>
+                    </UserLocation>'

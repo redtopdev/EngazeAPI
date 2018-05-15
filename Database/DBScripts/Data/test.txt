@@ -1,0 +1,21 @@
+
+{
+"Name":"vjai",
+"EventType":"1",
+"Description":"vjai have",
+"StartTime":"07\/22\/2015 7:26",
+"EndTime":"07\/22\/2015 8:26",
+"Duration":3600000,
+"UserList":[{"UserId":"66BED9FA-2DB6-4307-AD34-932701AA1F3F","MobileNumber":"+919611633226"}],
+"InitiatorId":"1b087fe2-a245-4956-b63c-ce67d7dd4c9e",
+"RequestorId":"1b087fe2-a245-4956-b63c-ce67d7dd4c9e",
+"EventStateId":"1",
+"TrackingStateId":"1",
+"DestinationLatitude":"1",
+"DestinationLongitude":"1",
+"DestinationName":"Office",
+"IsTrackingRequired":"True",
+"ReminderOffset":"",
+"TrackingStartOffset":"",
+"TrackingStopTime":""
+} 
