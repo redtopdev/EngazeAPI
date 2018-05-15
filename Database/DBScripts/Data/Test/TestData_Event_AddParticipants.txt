@@ -1,0 +1,19 @@
+http://watchus-001-site1.smarterasp.net/api/Event/AddParticipants
+
+{  "EventId":"bad6977d-ca2f-4bf7-8a18-9981c1fde3f7",
+   "UserList": [
+                {
+		 "UserId":"B55A859A-1388-4738-9F7C-3D2A604D81E1"
+                },
+                {
+		 "MobileNumber":"+919611633226"
+                },
+                {
+		 "MobileNumber":"8277099587"
+                },
+                {
+		 "MobileNumber":"9880099989"
+                },
+               ],
+   "RequestorId":"0B82534F-3EFD-4BA2-AF3A-0D359035A0A6"
+}

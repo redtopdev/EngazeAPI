@@ -1,0 +1,20 @@
+http://watchus-001-site1.smarterasp.net/api/Event/RespondToInvite
+
+
+for accept:
+{
+   "RequestorId":"501EE6EE-9B1C-4C39-B71E-14C3E635DBD3",
+   "EventId":"801C023A-0859-4FF5-824C-C81AED993FBD",
+   "EventAccepted":true,
+   "TrackingAccepted":true
+}
+
+
+
+for reject:
+{
+   "RequestorId":"501EE6EE-9B1C-4C39-B71E-14C3E635DBD3",
+   "EventId":"801C023A-0859-4FF5-824C-C81AED993FBD",
+   "EventAccepted":false,
+   "TrackingAccepted":false
+}

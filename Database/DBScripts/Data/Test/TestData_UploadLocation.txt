@@ -1,0 +1,9 @@
+http://watchus-001-site1.smarterasp.net/api/Location/Upload
+
+{
+   "UserId":"35B2141E-1531-4B4F-9F80-081363B69ED8",
+   "Latitude":"12.765024",
+   "Longitude":"77.497026",
+   "ETA":"1.0",
+   "ArrivalStatus":0
+}

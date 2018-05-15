@@ -1,0 +1,56 @@
+data for create group
+
+{
+"UserGroupName": "Group1",
+"CreatedBy": "7DC3D9D0-C7AE-4EEC-8F3F-D9F964A4A33A",
+"CreatedOn": "2015-06-03 11:24:06.630"
+}
+
+
+{
+"UserGroupName": "Group2",
+"CreatedBy": "7DC3D9D0-C7AE-4EEC-8F3F-D9F964A4A33A",
+"CreatedOn": "2015-06-03 11:24:06.630",
+"RequestorId": "7DC3D9D0-C7AE-4EEC-8F3F-D9F964A4A33A",
+"UserList": [
+                {
+		 "UserId":"F679E4C0-6C20-4140-905E-950B8A381576"
+                },
+                {
+		 "UserId":"66BED9FA-2DB6-4307-AD34-932701AA1F3F"
+                },
+                {
+		 "MobileNumber":"+919611633226"
+                }
+               ]
+}
+
+
+
+exec ws_spAddUserGroup '<?xml version="1.0" encoding="utf-8"?> 
+<UserGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">   
+<UserGroupId>00000000-0000-0000-0000-000000000000</UserGroupId>   
+<UserGroupName>Group5</UserGroupName>   
+<CreatedBy>7DC3D9D0-C7AE-4EEC-8F3F-D9F964A4A33A</CreatedBy>   
+<ModifiedBy>7DC3D9D0-C7AE-4EEC-8F3F-D9F964A4A33A</ModifiedBy>   
+<CreatedOn>2015-06-03T11:24:06.63</CreatedOn>   
+<ModifiedOn>0001-01-01T00:00:00</ModifiedOn>   
+<UserList>     
+ <UserGroupMember>       
+  <UserGroupId>00000000-0000-0000-0000-000000000000</UserGroupId>       
+  <UserId>F679E4C0-6C20-4140-905E-950B8A381576</UserId>       
+  <IsAdmin>false</IsAdmin>       
+  <CreatedOn>0001-01-01T00:00:00</CreatedOn>       
+  <ModifiedOn>0001-01-01T00:00:00</ModifiedOn>     
+ </UserGroupMember>     
+ <UserGroupMember>       
+  <UserGroupId>00000000-0000-0000-0000-000000000000</UserGroupId>       
+  <UserId>66BED9FA-2DB6-4307-AD34-932701AA1F3F</UserId>       
+  <IsAdmin>false</IsAdmin>       
+  <CreatedOn>0001-01-01T00:00:00</CreatedOn>       
+  <ModifiedOn>0001-01-01T00:00:00</ModifiedOn>     
+ </UserGroupMember>   
+</UserList>   
+<RequestorId>7dc3d9d0-c7ae-4eec-8f3f-d9f964a4a33a</RequestorId>   
+<NewUserGroupIdHolder>$userGroupId$</NewUserGroupIdHolder> 
+</UserGroup>'

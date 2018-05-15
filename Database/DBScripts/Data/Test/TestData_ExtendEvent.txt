@@ -1,0 +1,9 @@
+http://watchus-001-site1.smarterasp.net/api/Event/ExtendEvent
+
+
+for extend
+{
+   "RequestorId":"B55A859A-1388-4738-9F7C-3D2A604D81E1",
+   "EventId":"7675E6BC-7024-47BC-8A8E-850992B482DA",
+   "ExtendEventDuration":30
+}

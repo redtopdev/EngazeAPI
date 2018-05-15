@@ -1,0 +1,118 @@
+http://watchus-001-site1.smarterasp.net/api/Event/CreateEvent
+
+{
+   "Name":"tennisandcricket" ,
+   "EventType":"2" ,
+   "Description":"tennisandcricket",
+   "StartTime":"2015-09-20 05:37:09.200",
+   "EndTime":"2015-09-20 06:37:09.200",
+   "Duration":"1800.0",
+   "UserList": [
+                {
+		 "UserId":"B55A859A-1388-4738-9F7C-3D2A604D81E1"
+                },
+                {
+		 "MobileNumber":"+919611633226"
+                },
+                {
+		 "MobileNumber":"8277099587"
+                },
+                {
+		 "MobileNumber":"9880099989"
+                },
+               ],
+   "InitiatorId":"0B82534F-3EFD-4BA2-AF3A-0D359035A0A6",
+   "RequestorId":"0B82534F-3EFD-4BA2-AF3A-0D359035A0A6",
+   "EventStateId":"1",
+   "TrackingStateId":"1",
+   "DestinationLatitude":"",
+   "DestinationLongitude":"",
+   "DestinationName":"Office",
+   "IsTrackingRequired":"True",
+   "ReminderOffset":"1800",
+   "TrackingStartOffset":"1800",
+   "TrackingStopTime":""
+}
+
+
+
+
+
+Database data:
+
+
+
+exec ws_spAddEvent '<?xml version="1.0" encoding="utf-8"?>
+<Event xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+ <EventId>00000000-0000-0000-0000-000000000000</EventId>  
+ <Name>tennisandcricket</Name>  
+ <EventTypeId>0</EventTypeId>  
+ <Description>tennisandcricket</Description>  
+ <StartTime>2015-06-20T05:37:09.2</StartTime>  
+ <EndTime>1980-06-20T06:37:09.2</EndTime>  
+ <Duration>1800.0</Duration>  
+ <UserList>    
+ <EventParticipant>      
+ <EventId>00000000-0000-0000-0000-000000000000</EventId>      
+ <UserId>F679E4C0-6C20-4140-905E-950B8A381576</UserId>      
+ <IsEventAccepted>false</IsEventAccepted>      
+ <IsTrackingAccepted>false</IsTrackingAccepted>      
+ <TrackingStartTime>0001-01-01T00:00:00</TrackingStartTime>      
+ <TrackingEndTime>0001-01-01T00:00:00</TrackingEndTime>      
+ <TrackingEndReason>0</TrackingEndReason>      
+ <IsTrackingActive>false</IsTrackingActive>      
+ <UserEventEndTime>0001-01-01T00:00:00</UserEventEndTime>    
+ </EventParticipant>    
+ <EventParticipant>      
+ <EventId>00000000-0000-0000-0000-000000000000</EventId>      
+ <UserId>66BED9FA-2DB6-4307-AD34-932701AA1F3F</UserId>
+       <IsEventAccepted>false</IsEventAccepted>      
+       <IsTrackingAccepted>false</IsTrackingAccepted>      
+       <TrackingStartTime>0001-01-01T00:00:00</TrackingStartTime>      
+       <TrackingEndTime>0001-01-01T00:00:00</TrackingEndTime>      
+       <TrackingEndReason>0</TrackingEndReason>      
+       <IsTrackingActive>false</IsTrackingActive>      
+       <UserEventEndTime>0001-01-01T00:00:00</UserEventEndTime>    
+       </EventParticipant>  
+       </UserList>  
+       <InitiatorId>7dc3d9d0-c7ae-4eec-8f3f-d9f964a4a33a</InitiatorId>  
+       <EventStateId>1</EventStateId>  
+       <TrackingStateId>1</TrackingStateId>  
+       <DestinationLatitude xsi:nil="true" />
+         <DestinationLongitude xsi:nil="true" />
+           <DestinationName>Office</DestinationName>  
+           <IsTrackingRequired>true</IsTrackingRequired>  
+           <ReminderOffset>1800</ReminderOffset>  
+           <TrackingStartOffset>1800</TrackingStartOffset>  
+           <TrackingStopTime xsi:nil="true" />  
+           <RequestorId>7dc3d9d0-c7ae-4eec-8f3f-d9f964a4a33a</RequestorId>  
+           <HasRequestorAcceptedEvent>false</HasRequestorAcceptedEvent>  
+           <HasRequestorAcceptedTracking>false</HasRequestorAcceptedTracking>  
+           <NewEventIdHolder>$eventid$</NewEventIdHolder></Event>'
+
+
+
+{<?xml version="1.0" encoding="utf-16"?>
+<Event xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <EventId>a187d846-eef6-4722-b978-48b6633e661a</EventId>
+  <Name>sample string 2</Name>
+  <EventType>3</EventType>
+  <Description>sample string 4</Description>
+  <StartTime>2015-05-14T08:07:37.5361805+05:30</StartTime>
+  <EndTime>2015-05-14T08:07:37.5361805+05:30</EndTime>
+  <Duration>1.0</Duration>
+  <InitiatorId>3ebf1f7d-a2e7-4742-bdaa-c2801f9fb50c</InitiatorId>
+  <AdminList>
+    <guid>d739b0e3-6158-45ab-86bd-b4ac1e1d6ab6</guid>
+    <guid>1cbe9f3c-4fef-4380-bd16-cc8ef936830a</guid>
+  </AdminList>
+  <StateId>6</StateId>
+  <TrackingStateId>7</TrackingStateId>
+  <TrackingStopTime>2015-05-14T08:07:37.5361805+05:30</TrackingStopTime>
+  <DestinationLatitude>1.0</DestinationLatitude>
+  <DestinationLongitude>1.0</DestinationLongitude>
+  <DestinationName>sample string 8</DestinationName>
+  <IsTrackingRequired>true</IsTrackingRequired>
+  <ReminderOffset>1.0</ReminderOffset>
+  <TrackingStartOffset>1.0</TrackingStartOffset>
+</Event>}

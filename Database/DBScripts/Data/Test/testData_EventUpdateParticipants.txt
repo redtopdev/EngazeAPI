@@ -1,0 +1,23 @@
+"<?xml version="1.0" encoding="utf-16"?> 
+<Event xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">   
+<EventId>9b305647-b132-4f20-acb9-6ee7a8d18728</EventId>  
+ <EventTypeId>0</EventTypeId>   <StartTime xsi:nil="true" />   <EndTime xsi:nil="true" />   <Duration>0</Duration>   <UserList>     <EventParticipant>       <EventId>00000000-0000-0000-0000-000000000000</EventId>       <UserId>B55A859A-1388-4738-9F7C-3D2A604D81E1</UserId>       <EventAcceptanceStateId>0</EventAcceptanceStateId>       <IsTrackingAccepted>false</IsTrackingAccepted>       <TrackingStartTime>0001-01-01T00:00:00</TrackingStartTime>       <TrackingEndTime>0001-01-01T00:00:00</TrackingEndTime>       <TrackingEndReason>0</TrackingEndReason>       <IsTrackingActive>false</IsTrackingActive>       <UserEventEndTime>0001-01-01T00:00:00</UserEventEndTime>       <UserEventStateId>0</UserEventStateId>     </EventParticipant>     <EventParticipant>       <EventId>00000000-0000-0000-0000-000000000000</EventId>       <UserId>0B82534F-3EFD-4BA2-AF3A-0D359035A0A6</UserId>       <CountryCode>+91</CountryCode>       <MobileNumber>9611633226</MobileNumber>       <EventAcceptanceStateId>0</EventAcceptanceStateId>       <IsTrackingAccepted>false</IsTrackingAccepted>       <TrackingStartTime>0001-01-01T00:00:00</TrackingStartTime>       <TrackingEndTime>0001-01-01T00:00:00</TrackingEndTime>       <TrackingEndReason>0</TrackingEndReason>       <IsTrackingActive>false</IsTrackingActive>       <UserEventEndTime>0001-01-01T00:00:00</UserEventEndTime>       <UserEventStateId>0</UserEventStateId>       <MobileNumberStoredInRequestorPhone>+919611633226</MobileNumberStoredInRequestorPhone>     </EventParticipant>   </UserList>   <InitiatorId>00000000-0000-0000-0000-000000000000</InitiatorId>   <EventStateId>0</EventStateId>   <TrackingStateId>0</TrackingStateId>   <DestinationLatitude xsi:nil="true" />   <DestinationLongitude xsi:nil="true" />   <IsTrackingRequired xsi:nil="true" />   <ReminderTypeId>0</ReminderTypeId>   <ReminderOffset xsi:nil="true" />   <TrackingStartOffset xsi:nil="true" />   <TrackingStopTime xsi:nil="true" />   <IsQuickEvent>false</IsQuickEvent>   <RequestorId>0b82534f-3efd-4ba2-af3a-0d359035a0a6</RequestorId>   <EventAcceptanceStateOfRequestor>0</EventAcceptanceStateOfRequestor>   <HasRequestorAcceptedTracking>false</HasRequestorAcceptedTracking>   <UpdateParticipantsOnly>true</UpdateParticipantsOnly> </Event>"
+
+
+http://watchus-001-site1.smarterasp.net/api/Event/UpdateParticipants
+
+{
+   "EventId":"9B305647-B132-4F20-ACB9-6EE7A8D18728" ,
+   "UserList": [
+                {
+		 "UserId":"B55A859A-1388-4738-9F7C-3D2A604D81E1"
+                },
+                {
+		 "MobileNumber":"+919611633226"
+                },
+                {
+		 "MobileNumber":"501EE6EE-9B1C-4C39-B71E-14C3E635DBD3"
+                }
+               ],
+   "RequestorId":"0B82534F-3EFD-4BA2-AF3A-0D359035A0A6",
+}

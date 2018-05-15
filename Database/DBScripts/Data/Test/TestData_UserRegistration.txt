@@ -1,0 +1,57 @@
+http://watchus-001-site1.smarterasp.net/api/Account/Register
+
+
+
+{
+    "GCMClientId": "diyPfHyZYQw:APA91bGixDl6xPLm1x9V0e01_y_-zvQrxpQ_nElN82FlhFg_XRN05QYN8TVNfeaWMNeyoDXri0CZS4C-aMhleXKwmg5t4Q6-
+DIHrdBs3cpmuP4UgZ2r_gYwnwAkHb6C1FAiCzUMuCXH3",   
+    "ProfileName": "ssk24",      
+    "ImageUrl": "",
+    "DeviceId": "adbl78ewadbss",
+    "CountryCode" : "+91",
+    "MobileNumber" : "9611633226"
+}
+
+
+Client test Data
+{
+   "GCMClientId":"5BD5F6F2-DD9B-4D99-97FB-9F02C90A0C82" ,
+   "FirstName":"" ,
+   "LastName":"",
+   "ProfileName":"user1",
+   "Email":"user1@gmail.com",
+   "DateOfBirth":"1980-06-14 05:37:09.200",
+   "ImageUrl":"",
+   "DeviceId":"5BD5F6F2-DD9B-4D99-97FB-9F02C90A0C82",
+   "IsDeleted":"False",
+   "CreatedOn":"2015-06-14 05:37:09.200",
+}
+
+
+
+{
+   "GCMClientId":"D144F6A3-2970-4EF8-8DCD-C57BC70B21FA" ,
+   "FirstName":"" ,
+   "LastName":"",
+   "ProfileName":"user2",
+   "Email":"user2@gmail.com",
+   "DateOfBirth":"1980-06-14 05:37:09.200",
+   "ImageUrl":"NULL",
+   "DeviceId":"5BD5F6F2-DD9B-4D99-97FB-9F02C90A0C82",
+   "IsDeleted":"False",
+   "CreatedOn":"2015-06-14 05:37:09.200",
+}
+
+
+
+Database data
+
+exec ws_spAddUserProfile
+'<?xml version="1.0" encoding="utf-8"?><UserProfile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">\r\n  <UserId>00000000-0000-0000-0000-000000000000</UserId>  
+<ProfileName>ssk25</ProfileName>
+<GCMClientId>djyPfHyZYQw:APA91bGixDl6xPLm1x9V0e01_y_-zvQrxpQ_nElN82FlhFg_XRN05QYN8TVNfeaWMNeyoDXri0CZS4C-aMhleXKwmg5t4Q6- DIHrdBs3cpmuP4UgZ2r_gYwnwAkHb6C1FAiCzUMuCXH4</GCMClientId>  
+<DeviceId>10930192839</DeviceId>  
+<IsDeleted>false</IsDeleted>  
+<MobileNumber>9511533225</MobileNumber>
+<CountryCode>+91</CountryCode>
+</UserProfile>'

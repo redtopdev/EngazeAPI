@@ -1,0 +1,11 @@
+http://redtopdev.com/CoordifyAPI/api/Account/SaveFeedback
+
+{
+   "RequestorId":"B5B75A81-40DB-4699-99E9-1D12985A2090",
+   "Feedback":"testing feedbck with mail. with new subject",
+   "FeedbackCategory":"General"
+}
+
+
+
+"<?xml version="1.0" encoding="utf-16"?> <UserFeedback xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">   <UserFeedbackId>00000000-0000-0000-0000-000000000000</UserFeedbackId>   <RequestorId>0b82534f-3efd-4ba2-af3a-0d359035a0a6</RequestorId>   <Feedback>app is slow</Feedback>   <FeedbackCategory>Performance</FeedbackCategory>   <CreatedOn>0001-01-01T00:00:00</CreatedOn> </UserFeedback>"
