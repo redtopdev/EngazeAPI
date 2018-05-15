@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WatchUsModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="WatchUsModelStoreContainer">
+    <EntitySet Name="ws_Device" EntityType="WatchUsModel.Store.ws_Device" store:Type="Tables" store:Schema="dbo" store:Name="ws_Device">
+      <DefiningQuery>SELECT 
+      [ws_Device].[DeviceId] AS [DeviceId], 
+      [ws_Device].[ClientAuthenticationCode] AS [ClientAuthenticationCode], 
+      [ws_Device].[IMEINumber] AS [IMEINumber], 
+      [ws_Device].[MobileNumber] AS [MobileNumber], 
+      [ws_Device].[IsDeleted] AS [IsDeleted], 
+      [ws_Device].[CreatedOn] AS [CreatedOn], 
+      [ws_Device].[CreatedBy] AS [CreatedBy], 
+      [ws_Device].[ModifiedOn] AS [ModifiedOn], 
+      [ws_Device].[ModifiedBy] AS [ModifiedBy]
+      FROM [dbo].[ws_Device] AS [ws_Device]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ws_DeviceLocation" EntityType="WatchUsModel.Store.ws_DeviceLocation" store:Type="Tables" store:Schema="dbo" store:Name="ws_DeviceLocation">
+      <DefiningQuery>SELECT 
+      [ws_DeviceLocation].[DeviceId] AS [DeviceId], 
+      [ws_DeviceLocation].[Latitude] AS [Latitude], 
+      [ws_DeviceLocation].[Longitude] AS [Longitude], 
+      [ws_DeviceLocation].[IsDeleted] AS [IsDeleted], 
+      [ws_DeviceLocation].[CreatedOn] AS [CreatedOn], 
+      [ws_DeviceLocation].[CreatedBy] AS [CreatedBy], 
+      [ws_DeviceLocation].[ModifiedOn] AS [ModifiedOn], 
+      [ws_DeviceLocation].[ModifiedBy] AS [ModifiedBy]
+      FROM [dbo].[ws_DeviceLocation] AS [ws_DeviceLocation]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ws_Event" EntityType="WatchUsModel.Store.ws_Event" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ws_EventAcceptanceStateLookup" EntityType="WatchUsModel.Store.ws_EventAcceptanceStateLookup" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ws_EventStateLookup" EntityType="WatchUsModel.Store.ws_EventStateLookup" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ws_EventTypeLookup" EntityType="WatchUsModel.Store.ws_EventTypeLookup" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ws_mCountryDialingCodes" EntityType="WatchUsModel.Store.ws_mCountryDialingCodes" store:Type="Tables" store:Schema="dbo" store:Name="ws_mCountryDialingCodes">
+      <DefiningQuery>SELECT 
+      [ws_mCountryDialingCodes].[Code] AS [Code], 
+      [ws_mCountryDialingCodes].[Name] AS [Name], 
+      [ws_mCountryDialingCodes].[IsDeleted] AS [IsDeleted], 
+      [ws_mCountryDialingCodes].[CreatedOn] AS [CreatedOn], 
+      [ws_mCountryDialingCodes].[CreatedBy] AS [CreatedBy], 
+      [ws_mCountryDialingCodes].[ModifiedOn] AS [ModifiedOn], 
+      [ws_mCountryDialingCodes].[ModifiedBy] AS [ModifiedBy]
+      FROM [dbo].[ws_mCountryDialingCodes] AS [ws_mCountryDialingCodes]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ws_TrackingStateLookup" EntityType="WatchUsModel.Store.ws_TrackingStateLookup" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ws_UserAuthentication" EntityType="WatchUsModel.Store.ws_UserAuthentication" store:Type="Tables" store:Schema="dbo" store:Name="ws_UserAuthentication">
+      <DefiningQuery>SELECT 
+      [ws_UserAuthentication].[UserID] AS [UserID], 
+      [ws_UserAuthentication].[Token] AS [Token], 
+      [ws_UserAuthentication].[Salt] AS [Salt], 
+      [ws_UserAuthentication].[IsDeleted] AS [IsDeleted], 
+      [ws_UserAuthentication].[CreatedOn] AS [CreatedOn], 
+      [ws_UserAuthentication].[LastAccessedOn] AS [LastAccessedOn]
+      FROM [dbo].[ws_UserAuthentication] AS [ws_UserAuthentication]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ws_UserEvent" EntityType="WatchUsModel.Store.ws_UserEvent" store:Type="Tables" store:Schema="dbo" store:Name="ws_UserEvent">
+      <DefiningQuery>SELECT 
+      [ws_UserEvent].[EventId] AS [EventId], 
+      [ws_UserEvent].[UserId] AS [UserId], 
+      [ws_UserEvent].[UserGroupId] AS [UserGroupId], 
+      [ws_UserEvent].[EventAcceptanceStateId] AS [EventAcceptanceStateId], 
+      [ws_UserEvent].[IsTrackingAccepted] AS [IsTrackingAccepted], 
+      [ws_UserEvent].[TrackingStartTime] AS [TrackingStartTime], 
+      [ws_UserEvent].[TrackingEndTime] AS [TrackingEndTime], 
+      [ws_UserEvent].[TrackingEndReason] AS [TrackingEndReason], 
+      [ws_UserEvent].[IsTrackingActive] AS [IsTrackingActive], 
+      [ws_UserEvent].[IsDeleted] AS [IsDeleted], 
+      [ws_UserEvent].[UserEventEndTime] AS [UserEventEndTime], 
+      [ws_UserEvent].[CreatedOn] AS [CreatedOn], 
+      [ws_UserEvent].[ModifiedOn] AS [ModifiedOn], 
+      [ws_UserEvent].[UserEventStateId] AS [UserEventStateId]
+      FROM [dbo].[ws_UserEvent] AS [ws_UserEvent]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ws_UserEventStateLookup" EntityType="WatchUsModel.Store.ws_UserEventStateLookup" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ws_UserFeedback" EntityType="WatchUsModel.Store.ws_UserFeedback" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ws_UserGroup" EntityType="WatchUsModel.Store.ws_UserGroup" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ws_UserGroupMember" EntityType="WatchUsModel.Store.ws_UserGroupMember" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ws_UserLocation" EntityType="WatchUsModel.Store.ws_UserLocation" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ws_UserProfile" EntityType="WatchUsModel.Store.ws_UserProfile" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DB_9C0617_watchus.dbo.ws_Device' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="ws_Device">
+    <Key>
+      <PropertyRef Name="DeviceId" />
+      <PropertyRef Name="ClientAuthenticationCode" />
+      <PropertyRef Name="IMEINumber" />
+      <PropertyRef Name="MobileNumber" />
+      <PropertyRef Name="CreatedOn" />
+      <PropertyRef Name="CreatedBy" />
+      <PropertyRef Name="ModifiedOn" />
+      <PropertyRef Name="ModifiedBy" />
+    </Key>
+    <Property Name="DeviceId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ClientAuthenticationCode" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="IMEINumber" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="MobileNumber" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="ModifiedOn" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="varchar" Nullable="false" MaxLength="200" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DB_9C0617_watchus.dbo.ws_DeviceLocation' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="ws_DeviceLocation">
+    <Key>
+      <PropertyRef Name="DeviceId" />
+      <PropertyRef Name="Latitude" />
+      <PropertyRef Name="Longitude" />
+      <PropertyRef Name="IsDeleted" />
+      <PropertyRef Name="CreatedOn" />
+      <PropertyRef Name="CreatedBy" />
+      <PropertyRef Name="ModifiedOn" />
+      <PropertyRef Name="ModifiedBy" />
+    </Key>
+    <Property Name="DeviceId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Latitude" Type="decimal" Nullable="false" Precision="9" Scale="6" />
+    <Property Name="Longitude" Type="decimal" Nullable="false" Precision="9" Scale="6" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="ModifiedOn" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="varchar" Nullable="false" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="ws_Event">
+    <Key>
+      <PropertyRef Name="EventId" />
+    </Key>
+    <Property Name="EventId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="EventTypeId" Type="int" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="StartTime" Type="datetime" Nullable="false" />
+    <Property Name="EndTime" Type="datetime" />
+    <Property Name="Duration" Type="int" />
+    <Property Name="EventStateId" Type="int" Nullable="false" />
+    <Property Name="TrackingStateId" Type="int" Nullable="false" />
+    <Property Name="TrackingStopTime" Type="datetime" />
+    <Property Name="DestinationLatitude" Type="decimal" Precision="9" Scale="6" />
+    <Property Name="DestinationLongitude" Type="decimal" Precision="9" Scale="6" />
+    <Property Name="DestinationName" Type="varchar" MaxLength="100" />
+    <Property Name="DestinationAddress" Type="nvarchar" MaxLength="500" />
+    <Property Name="IsTrackingRequired" Type="bit" />
+    <Property Name="ReminderTypeId" Type="int" Nullable="false" />
+    <Property Name="ReminderOffset" Type="int" />
+    <Property Name="TrackingStartOffset" Type="int" />
+    <Property Name="InitiatorId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="IsQuickEvent" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ws_EventAcceptanceStateLookup">
+    <Key>
+      <PropertyRef Name="EventAcceptanceStateId" />
+    </Key>
+    <Property Name="EventAcceptanceStateId" Type="int" Nullable="false" />
+    <Property Name="EventAcceptanceState" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ws_EventStateLookup">
+    <Key>
+      <PropertyRef Name="EventStateId" />
+    </Key>
+    <Property Name="EventStateId" Type="int" Nullable="false" />
+    <Property Name="EventState" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ws_EventTypeLookup">
+    <Key>
+      <PropertyRef Name="EventTypeId" />
+    </Key>
+    <Property Name="EventTypeId" Type="int" Nullable="false" />
+    <Property Name="EventType" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DB_9C0617_watchus.dbo.ws_mCountryDialingCodes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="ws_mCountryDialingCodes">
+    <Key>
+      <PropertyRef Name="Code" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="IsDeleted" />
+      <PropertyRef Name="CreatedOn" />
+      <PropertyRef Name="CreatedBy" />
+      <PropertyRef Name="ModifiedOn" />
+      <PropertyRef Name="ModifiedBy" />
+    </Key>
+    <Property Name="Code" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="ModifiedOn" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="varchar" Nullable="false" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="ws_TrackingStateLookup">
+    <Key>
+      <PropertyRef Name="TrackingStateId" />
+    </Key>
+    <Property Name="TrackingStateId" Type="int" Nullable="false" />
+    <Property Name="TrackingState" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DB_9C0617_watchus.dbo.ws_UserAuthentication' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="ws_UserAuthentication">
+    <Key>
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="IsDeleted" />
+      <PropertyRef Name="CreatedOn" />
+    </Key>
+    <Property Name="UserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Token" Type="varchar" MaxLength="200" />
+    <Property Name="Salt" Type="varchar" MaxLength="200" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="LastAccessedOn" Type="bit" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DB_9C0617_watchus.dbo.ws_UserEvent' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="ws_UserEvent">
+    <Key>
+      <PropertyRef Name="EventId" />
+      <PropertyRef Name="EventAcceptanceStateId" />
+      <PropertyRef Name="IsTrackingAccepted" />
+      <PropertyRef Name="IsTrackingActive" />
+      <PropertyRef Name="IsDeleted" />
+      <PropertyRef Name="UserEventStateId" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="EventId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserGroupId" Type="uniqueidentifier" />
+    <Property Name="EventAcceptanceStateId" Type="int" Nullable="false" />
+    <Property Name="IsTrackingAccepted" Type="bit" Nullable="false" />
+    <Property Name="TrackingStartTime" Type="datetime" />
+    <Property Name="TrackingEndTime" Type="datetime" />
+    <Property Name="TrackingEndReason" Type="int" />
+    <Property Name="IsTrackingActive" Type="bit" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="UserEventEndTime" Type="datetime" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="UserEventStateId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ws_UserEventStateLookup">
+    <Key>
+      <PropertyRef Name="UserEventStateId" />
+    </Key>
+    <Property Name="UserEventStateId" Type="int" Nullable="false" />
+    <Property Name="UserEventState" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ws_UserFeedback">
+    <Key>
+      <PropertyRef Name="UserFeedbackId" />
+    </Key>
+    <Property Name="UserFeedbackId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Feedback" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FeedbackCategory" Type="nchar" MaxLength="20" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="UserEmailId" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="ws_UserGroup">
+    <Key>
+      <PropertyRef Name="UserGroupId" />
+    </Key>
+    <Property Name="UserGroupId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserGroupName" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="GroupImageUrl" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="ws_UserGroupMember">
+    <Key>
+      <PropertyRef Name="UserGroupId" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserGroupId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IsAdmin" Type="bit" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ws_UserLocation">
+    <Key>
+      <PropertyRef Name="UserLocationId" />
+    </Key>
+    <Property Name="UserLocationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Latitude" Type="decimal" Nullable="false" Precision="9" Scale="6" />
+    <Property Name="Longitude" Type="decimal" Nullable="false" Precision="9" Scale="6" />
+    <Property Name="LocationAddress" Type="nvarchar(max)" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="ETA" Type="decimal" Precision="5" Scale="2" />
+    <Property Name="ArrivalStatus" Type="int" />
+  </EntityType>
+  <EntityType Name="ws_UserProfile">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="GCMClientId" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="100" />
+    <Property Name="LastName" Type="varchar" MaxLength="100" />
+    <Property Name="ProfileName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="DateOfBirth" Type="datetime" />
+    <Property Name="DeviceId" Type="nvarchar" MaxLength="100" />
+    <Property Name="CountryCode" Type="nvarchar" MaxLength="10" />
+    <Property Name="MobileNumber" Type="nvarchar" MaxLength="20" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="ImageUrl" Type="nvarchar(max)" />
+  </EntityType>
+  <Function Name="rs_spGetCountryDialingCodes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="ws_spAddEvent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="event" Type="xml" Mode="In" />
+  </Function>
+  <Function Name="ws_spAddOrUpdateUserGroupMember" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="userGroupMember" Type="xml" Mode="In" />
+  </Function>
+  <Function Name="ws_spAddUserFeedback" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="userFeedback" Type="xml" Mode="In" />
+  </Function>
+  <Function Name="ws_spAddUserGroup" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="userGroup" Type="xml" Mode="In" />
+  </Function>
+  <Function Name="ws_spAddUserLocation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="userLocation" Type="xml" Mode="In" />
+  </Function>
+  <Function Name="ws_spAddUserProfile" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="userProfile" Type="xml" Mode="In" />
+  </Function>
+  <Function Name="ws_spDeleteEvent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="eventRequest" Type="xml" Mode="In" />
+  </Function>
+  <Function Name="ws_spDeleteUserGroup" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="userGroup" Type="xml" Mode="In" />
+  </Function>
+  <Function Name="ws_spEndEvent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="eventRequest" Type="xml" Mode="In" />
+  </Function>
+  <Function Name="ws_spExtendEvent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="eventRequest" Type="xml" Mode="In" />
+  </Function>
+  <Function Name="ws_spGetAllEventsForUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="eventRequest" Type="xml" Mode="In" />
+  </Function>
+  <Function Name="ws_spGetAllEventsForUserInternal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="eventRequest" Type="xml" Mode="In" />
+  </Function>
+  <Function Name="ws_spGetGcmClientIdForMobile" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="gcmClientIdRequest" Type="xml" Mode="In" />
+  </Function>
+  <Function Name="ws_spGetRegisteredContacts" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="contactsRequest" Type="xml" Mode="In" />
+  </Function>
+  <Function Name="ws_spGetUserCountryCode" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="userId" Type="uniqueidentifier" Mode="In" />
+  </Function>
+  <Function Name="ws_spGetUserGcmClientId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="userId" Type="uniqueidentifier" Mode="In" />
+  </Function>
+  <Function Name="ws_spGetUserLocation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="eventLocationRequest" Type="xml" Mode="In" />
+  </Function>
+  <Function Name="ws_spLeaveEvent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="eventRequest" Type="xml" Mode="In" />
+  </Function>
+  <Function Name="ws_spLeaveUserGroup" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="userGroupRequest" Type="xml" Mode="In" />
+  </Function>
+  <Function Name="ws_spRespondToEventInvite" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="eventRequest" Type="xml" Mode="In" />
+  </Function>
+  <Function Name="ws_spSyncEventParticipants" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="event" Type="xml" Mode="In" />
+  </Function>
+  <Function Name="ws_spSyncUserGroupMember" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="userGroup" Type="xml" Mode="In" />
+  </Function>
+  <Function Name="ws_spSyncUserGroupMembers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="userGroupMember" Type="xml" Mode="In" />
+  </Function>
+  <Function Name="ws_spUpdateEvent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="event" Type="xml" Mode="In" />
+  </Function>
+  <Function Name="ws_spUpdateEventLocation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="eventRequest" Type="xml" Mode="In" />
+  </Function>
+  <Function Name="ws_spUpdateStatesForEvent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="eventId" Type="uniqueidentifier" Mode="In" />
+  </Function>
+  <Function Name="ws_spUpdateUserGroup" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="userGroup" Type="xml" Mode="In" />
+  </Function>
+  <Function Name="ws_spUpdateUserProfile" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="userProfile" Type="xml" Mode="In" />
+  </Function>
+</Schema>

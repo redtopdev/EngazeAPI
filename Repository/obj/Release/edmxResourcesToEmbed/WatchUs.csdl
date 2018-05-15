@@ -1,0 +1,422 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WatchUsModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="WatchUsEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="ws_Device" EntityType="WatchUsModel.ws_Device" />
+    <EntitySet Name="ws_DeviceLocation" EntityType="WatchUsModel.ws_DeviceLocation" />
+    <EntitySet Name="ws_Event" EntityType="WatchUsModel.ws_Event" />
+    <EntitySet Name="ws_mCountryDialingCodes" EntityType="WatchUsModel.ws_mCountryDialingCodes" />
+    <EntitySet Name="ws_UserAuthentication" EntityType="WatchUsModel.ws_UserAuthentication" />
+    <EntitySet Name="ws_UserEvent" EntityType="WatchUsModel.ws_UserEvent" />
+    <EntitySet Name="ws_UserLocation" EntityType="WatchUsModel.ws_UserLocation" />
+    <EntitySet Name="ws_UserProfile" EntityType="WatchUsModel.ws_UserProfile" />
+    <FunctionImport Name="GetCountryDialingCodes" ReturnType="Collection(WatchUsModel.rs_spGetCountryDialingCodes_Result)" />
+    <FunctionImport Name="AddEvent" ReturnType="Collection(Guid)">
+      <Parameter Name="event" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetUserLocation" ReturnType="Collection(String)">
+      <Parameter Name="eventLocationRequest" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="ws_UserGroup" EntityType="WatchUsModel.ws_UserGroup" />
+    <EntitySet Name="ws_UserGroupMember" EntityType="WatchUsModel.ws_UserGroupMember" />
+    <FunctionImport Name="AddOrUpdateUserGroupMember" ReturnType="Collection(Boolean)">
+      <Parameter Name="userGroupMember" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="AddUserGroup" ReturnType="Collection(Guid)">
+      <Parameter Name="userGroup" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteUserGroup">
+      <Parameter Name="userGroup" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateUserGroup">
+      <Parameter Name="userGroup" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SyncUserGroupMembers">
+      <Parameter Name="userGroupMember" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetAllEventsForUser" ReturnType="Collection(String)">
+      <Parameter Name="eventRequest" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="AddUserProfile" ReturnType="Collection(Guid)">
+      <Parameter Name="userProfile" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SyncEventParticipants">
+      <Parameter Name="event" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SyncUserGroupMember">
+      <Parameter Name="userGroup" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateUserProfile">
+      <Parameter Name="userProfile" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="ws_EventStateLookup" EntityType="WatchUsModel.ws_EventStateLookup" />
+    <EntitySet Name="ws_EventTypeLookup" EntityType="WatchUsModel.ws_EventTypeLookup" />
+    <EntitySet Name="ws_TrackingStateLookup" EntityType="WatchUsModel.ws_TrackingStateLookup" />
+    <FunctionImport Name="LeaveUserGroup" ReturnType="Collection(String)">
+      <Parameter Name="userGroupRequest" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="AddUserLocation" ReturnType="Collection(String)">
+      <Parameter Name="userLocation" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="RespondToEventInvite" ReturnType="Collection(Int32)">
+      <Parameter Name="eventRequest" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteEvent" ReturnType="Collection(Int32)">
+      <Parameter Name="eventRequest" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetRegisteredContacts" ReturnType="Collection(String)">
+      <Parameter Name="contactsRequest" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateEvent" ReturnType="Collection(Int32)">
+      <Parameter Name="event" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetUserCountryCode" ReturnType="Collection(String)">
+      <Parameter Name="userId" Mode="In" Type="Guid" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateStatesForEvent">
+      <Parameter Name="eventId" Mode="In" Type="Guid" />
+    </FunctionImport>
+    <FunctionImport Name="ExtendEvent" ReturnType="Collection(Int32)">
+      <Parameter Name="eventRequest" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="ws_EventAcceptanceStateLookup" EntityType="WatchUsModel.ws_EventAcceptanceStateLookup" />
+    <FunctionImport Name="EndEvent" ReturnType="Collection(Int32)">
+      <Parameter Name="eventRequest" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="ws_UserEventStateLookup" EntityType="WatchUsModel.ws_UserEventStateLookup" />
+    <FunctionImport Name="LeaveEvent" ReturnType="Collection(Int32)">
+      <Parameter Name="eventRequest" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetEventsInternal" ReturnType="Collection(String)">
+      <Parameter Name="eventRequest" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetUserGcmClientId" ReturnType="Collection(String)">
+      <Parameter Name="userId" Mode="In" Type="Guid" />
+    </FunctionImport>
+    <EntitySet Name="ws_UserFeedback" EntityType="WatchUsModel.ws_UserFeedback" />
+    <FunctionImport Name="SaveUserFeedback" ReturnType="Collection(Int32)">
+      <Parameter Name="userFeedback" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateEventLocation" ReturnType="Collection(Int32)">
+      <Parameter Name="eventRequest" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetGcmClientIdForMobile" ReturnType="Collection(String)">
+      <Parameter Name="gcmClientIdRequest" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="ws_Device">
+    <Key>
+      <PropertyRef Name="DeviceId" />
+      <PropertyRef Name="ClientAuthenticationCode" />
+      <PropertyRef Name="IMEINumber" />
+      <PropertyRef Name="MobileNumber" />
+      <PropertyRef Name="CreatedOn" />
+      <PropertyRef Name="CreatedBy" />
+      <PropertyRef Name="ModifiedOn" />
+      <PropertyRef Name="ModifiedBy" />
+    </Key>
+    <Property Name="DeviceId" Type="Guid" Nullable="false" />
+    <Property Name="ClientAuthenticationCode" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="IMEINumber" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="MobileNumber" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="ModifiedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="ws_DeviceLocation">
+    <Key>
+      <PropertyRef Name="DeviceId" />
+      <PropertyRef Name="Latitude" />
+      <PropertyRef Name="Longitude" />
+      <PropertyRef Name="IsDeleted" />
+      <PropertyRef Name="CreatedOn" />
+      <PropertyRef Name="CreatedBy" />
+      <PropertyRef Name="ModifiedOn" />
+      <PropertyRef Name="ModifiedBy" />
+    </Key>
+    <Property Name="DeviceId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Latitude" Type="Decimal" Nullable="false" Precision="9" Scale="6" />
+    <Property Name="Longitude" Type="Decimal" Nullable="false" Precision="9" Scale="6" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="ModifiedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="ws_Event">
+    <Key>
+      <PropertyRef Name="EventId" />
+    </Key>
+    <Property Name="EventId" Type="Guid" Nullable="false" />
+    <Property Name="EventTypeId" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="StartTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EndTime" Type="DateTime" Precision="3" />
+    <Property Name="Duration" Type="Int32" />
+    <Property Name="InitiatorId" Type="Guid" Nullable="false" />
+    <Property Name="TrackingStateId" Type="Int32" Nullable="false" />
+    <Property Name="TrackingStopTime" Type="DateTime" Precision="3" />
+    <Property Name="DestinationLatitude" Type="Decimal" Precision="9" Scale="6" />
+    <Property Name="DestinationLongitude" Type="Decimal" Precision="9" Scale="6" />
+    <Property Name="DestinationName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="IsTrackingRequired" Type="Boolean" />
+    <Property Name="ReminderOffset" Type="Int16" />
+    <Property Name="TrackingStartOffset" Type="Int16" />
+    <Property Type="Int32" Name="EventStateId" Nullable="false" />
+    <Property Type="DateTime" Name="CreatedOn" Nullable="false" Precision="3" />
+    <Property Type="Guid" Name="ModifiedBy" />
+    <Property Type="DateTime" Name="ModifiedOn" Precision="3" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ReminderTypeId" Nullable="false" />
+    <Property Type="String" Name="DestinationAddress" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsQuickEvent" Nullable="false" />
+    <Property Type="Boolean" Name="IsDeleted" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ws_mCountryDialingCodes">
+    <Key>
+      <PropertyRef Name="Code" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="IsDeleted" />
+      <PropertyRef Name="CreatedOn" />
+      <PropertyRef Name="CreatedBy" />
+      <PropertyRef Name="ModifiedOn" />
+      <PropertyRef Name="ModifiedBy" />
+    </Key>
+    <Property Name="Code" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="ModifiedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="ws_UserAuthentication">
+    <Key>
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="IsDeleted" />
+      <PropertyRef Name="CreatedOn" />
+    </Key>
+    <Property Name="UserID" Type="Guid" Nullable="false" />
+    <Property Name="Token" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="Salt" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastAccessedOn" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="ws_UserEvent">
+    <Key>
+      <PropertyRef Name="EventId" />
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="IsTrackingAccepted" />
+      <PropertyRef Name="IsTrackingActive" />
+      <PropertyRef Name="IsDeleted" />
+      <PropertyRef Name="EventAcceptanceStateId" />
+      <PropertyRef Name="UserEventStateId" />
+    </Key>
+    <Property Name="EventId" Type="Guid" Nullable="false" />
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="IsTrackingAccepted" Type="Boolean" Nullable="false" />
+    <Property Name="TrackingStartTime" Type="DateTime" Precision="3" />
+    <Property Name="TrackingEndTime" Type="DateTime" Precision="3" />
+    <Property Name="TrackingEndReason" Type="Int32" />
+    <Property Name="IsTrackingActive" Type="Boolean" Nullable="false" />
+    <Property Type="Boolean" Name="IsDeleted" Nullable="false" />
+    <Property Type="DateTime" Name="UserEventEndTime" Precision="3" />
+    <Property Type="Guid" Name="UserGroupId" />
+    <Property Type="DateTime" Name="CreatedOn" Precision="3" />
+    <Property Type="DateTime" Name="ModifiedOn" Precision="3" />
+    <Property Type="Int32" Name="EventAcceptanceStateId" Nullable="false" />
+    <Property Type="Int32" Name="UserEventStateId" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ws_UserLocation">
+    <Key>
+      <PropertyRef Name="UserLocationId" />
+    </Key>
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="Latitude" Type="Decimal" Nullable="false" Precision="9" Scale="6" />
+    <Property Name="Longitude" Type="Decimal" Nullable="false" Precision="9" Scale="6" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ETA" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="ArrivalStatus" Type="Int32" />
+    <Property Type="Guid" Name="UserLocationId" Nullable="false" />
+    <Property Type="String" Name="LocationAddress" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ws_UserProfile">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="LastName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="ProfileName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="DateOfBirth" Type="DateTime" Precision="3" />
+    <Property Name="DeviceId" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Type="String" Name="GCMClientId" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="ImageUrl" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CountryCode" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MobileNumber" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <ComplexType Name="rs_spGetCountryDialingCodes_Result">
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Code" Nullable="false" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="ws_spGetEventById_Result">
+    <Property Type="Guid" Name="EventId" Nullable="false" />
+    <Property Type="String" Name="NAME" Nullable="false" MaxLength="200" />
+    <Property Type="Int32" Name="EventTypeId" Nullable="false" />
+    <Property Type="String" Name="Description" Nullable="false" MaxLength="500" />
+    <Property Type="DateTime" Name="StartTime" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="EndTime" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="Duration" Nullable="true" Precision="5" Scale="2" />
+    <Property Type="Guid" Name="InitiatorId" Nullable="false" />
+    <Property Type="Int32" Name="EventStateId" Nullable="false" />
+    <Property Type="Int32" Name="TrackingStateId" Nullable="false" />
+    <Property Type="DateTime" Name="TrackingStopTime" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="DestinationLatitude" Nullable="true" Precision="9" Scale="6" />
+    <Property Type="Decimal" Name="DestinationLongitude" Nullable="true" Precision="9" Scale="6" />
+    <Property Type="String" Name="DestinationName" Nullable="true" MaxLength="500" />
+    <Property Type="Boolean" Name="IsTrackingRequired" Nullable="true" />
+    <Property Type="Decimal" Name="ReminderOffset" Nullable="true" Precision="5" Scale="2" />
+    <Property Type="Decimal" Name="TrackingStartOffset" Nullable="true" Precision="5" Scale="2" />
+    <Property Type="Boolean" Name="HasRequestorAcceptedEvent" Nullable="false" />
+    <Property Type="Boolean" Name="HasRequestorAcceptedTracking" Nullable="false" />
+    <Property Type="Guid" Name="RequestorId" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="ws_spGetUserLocation_Result">
+    <Property Type="Guid" Name="UserId" Nullable="false" />
+    <Property Type="String" Name="ProfileName" Nullable="false" MaxLength="100" />
+    <Property Type="Decimal" Name="Latitude" Nullable="false" Precision="9" Scale="6" />
+    <Property Type="Decimal" Name="Longitude" Nullable="false" Precision="9" Scale="6" />
+    <Property Type="Boolean" Name="IsDeleted" Nullable="false" />
+    <Property Type="DateTime" Name="CreatedOn" Nullable="false" Precision="23" />
+    <Property Type="Decimal" Name="ETA" Nullable="false" Precision="5" Scale="2" />
+    <Property Type="Int32" Name="ArrivalStatus" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="ws_UserGroup">
+    <Key>
+      <PropertyRef Name="UserGroupId" />
+    </Key>
+    <Property Type="Guid" Name="UserGroupId" Nullable="false" />
+    <Property Type="String" Name="UserGroupName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="CreatedBy" Nullable="false" />
+    <Property Type="DateTime" Name="CreatedOn" Nullable="false" Precision="3" />
+    <Property Type="Guid" Name="ModifiedBy" />
+    <Property Type="DateTime" Name="ModifiedOn" Precision="3" />
+    <Property Type="Boolean" Name="IsDeleted" Nullable="false" />
+    <Property Type="String" Name="GroupImageUrl" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ws_UserGroupMember">
+    <Key>
+      <PropertyRef Name="UserGroupId" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Type="Guid" Name="UserGroupId" Nullable="false" />
+    <Property Type="Guid" Name="UserId" Nullable="false" />
+    <Property Type="Boolean" Name="IsAdmin" Nullable="false" />
+    <Property Type="Guid" Name="CreatedBy" Nullable="false" />
+    <Property Type="DateTime" Name="CreatedOn" Nullable="false" Precision="3" />
+    <Property Type="Guid" Name="ModifiedBy" />
+    <Property Type="DateTime" Name="ModifiedOn" Precision="3" />
+    <Property Type="Boolean" Name="IsDeleted" Nullable="false" />
+  </EntityType>
+  <ComplexType Name="ws_spGetAllEventsForUser_Result">
+    <Property Type="Guid" Name="EventId" Nullable="false" />
+    <Property Type="String" Name="NAME" Nullable="false" MaxLength="200" />
+    <Property Type="Int32" Name="EventType" Nullable="false" />
+    <Property Type="String" Name="Description" Nullable="false" MaxLength="500" />
+    <Property Type="DateTime" Name="StartTime" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="EndTime" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="Duration" Nullable="true" Precision="5" Scale="2" />
+    <Property Type="Guid" Name="InitiatorId" Nullable="false" />
+    <Property Type="Int32" Name="StateId" Nullable="false" />
+    <Property Type="Int32" Name="TrackingStateId" Nullable="false" />
+    <Property Type="DateTime" Name="TrackingStopTime" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="DestinationLatitude" Nullable="true" Precision="9" Scale="6" />
+    <Property Type="Decimal" Name="DestinationLongitude" Nullable="true" Precision="9" Scale="6" />
+    <Property Type="String" Name="DestinationName" Nullable="true" MaxLength="500" />
+    <Property Type="Boolean" Name="IsTrackingRequired" Nullable="true" />
+    <Property Type="Decimal" Name="ReminderOffset" Nullable="true" Precision="5" Scale="2" />
+    <Property Type="Decimal" Name="TrackingStartOffset" Nullable="true" Precision="5" Scale="2" />
+    <Property Type="Guid" Name="RequestorId" Nullable="true" />
+    <Property Type="Boolean" Name="HasRequestorAcceptedEvent" Nullable="false" />
+    <Property Type="Boolean" Name="HasRequestorAcceptedTracking" Nullable="false" />
+  </ComplexType>
+  <EntityType Name="ws_EventStateLookup">
+    <Key>
+      <PropertyRef Name="EventStateId" />
+    </Key>
+    <Property Type="Int32" Name="EventStateId" Nullable="false" />
+    <Property Type="String" Name="EventState" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="IsDeleted" Nullable="false" />
+    <Property Type="Guid" Name="CreatedBy" Nullable="false" />
+    <Property Type="DateTime" Name="CreatedOn" Nullable="false" Precision="3" />
+    <Property Type="Guid" Name="ModifiedBy" />
+    <Property Type="DateTime" Name="ModifiedOn" Precision="3" />
+  </EntityType>
+  <EntityType Name="ws_EventTypeLookup">
+    <Key>
+      <PropertyRef Name="EventTypeId" />
+    </Key>
+    <Property Type="Int32" Name="EventTypeId" Nullable="false" />
+    <Property Type="String" Name="EventType" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Description" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsDeleted" Nullable="false" />
+    <Property Type="Guid" Name="CreatedBy" Nullable="false" />
+    <Property Type="DateTime" Name="CreatedOn" Nullable="false" Precision="3" />
+    <Property Type="Guid" Name="ModifiedBy" />
+    <Property Type="DateTime" Name="ModifiedOn" Precision="3" />
+  </EntityType>
+  <EntityType Name="ws_TrackingStateLookup">
+    <Key>
+      <PropertyRef Name="TrackingStateId" />
+    </Key>
+    <Property Type="Int32" Name="TrackingStateId" Nullable="false" />
+    <Property Type="String" Name="TrackingState" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="IsDeleted" Nullable="false" />
+    <Property Type="Guid" Name="CreatedBy" Nullable="false" />
+    <Property Type="DateTime" Name="CreatedOn" Nullable="false" Precision="3" />
+    <Property Type="Guid" Name="ModifiedBy" />
+    <Property Type="DateTime" Name="ModifiedOn" Precision="3" />
+  </EntityType>
+  <EntityType Name="ws_EventAcceptanceStateLookup">
+    <Key>
+      <PropertyRef Name="EventAcceptanceStateId" />
+    </Key>
+    <Property Type="Int32" Name="EventAcceptanceStateId" Nullable="false" />
+    <Property Type="String" Name="EventAcceptanceState" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="IsDeleted" Nullable="false" />
+    <Property Type="Guid" Name="CreatedBy" Nullable="false" />
+    <Property Type="DateTime" Name="CreatedOn" Nullable="false" Precision="3" />
+    <Property Type="Guid" Name="ModifiedBy" />
+    <Property Type="DateTime" Name="ModifiedOn" Precision="3" />
+  </EntityType>
+  <EntityType Name="ws_UserEventStateLookup">
+    <Key>
+      <PropertyRef Name="UserEventStateId" />
+    </Key>
+    <Property Type="Int32" Name="UserEventStateId" Nullable="false" />
+    <Property Type="String" Name="UserEventState" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="IsDeleted" Nullable="false" />
+    <Property Type="Guid" Name="CreatedBy" Nullable="false" />
+    <Property Type="DateTime" Name="CreatedOn" Nullable="false" Precision="3" />
+    <Property Type="Guid" Name="ModifiedBy" />
+    <Property Type="DateTime" Name="ModifiedOn" Precision="3" />
+  </EntityType>
+  <EntityType Name="ws_UserFeedback">
+    <Key>
+      <PropertyRef Name="UserFeedbackId" />
+    </Key>
+    <Property Type="Guid" Name="UserFeedbackId" Nullable="false" />
+    <Property Type="Guid" Name="UserId" Nullable="false" />
+    <Property Type="String" Name="Feedback" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FeedbackCategory" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Type="DateTime" Name="CreatedOn" Nullable="false" Precision="3" />
+    <Property Type="String" Name="UserEmailId" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

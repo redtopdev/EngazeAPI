@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WatchUsModelStoreContainer" CdmEntityContainer="WatchUsEntities">
+    <EntitySetMapping Name="ws_Device">
+      <EntityTypeMapping TypeName="WatchUsModel.ws_Device">
+        <MappingFragment StoreEntitySet="ws_Device">
+          <ScalarProperty Name="DeviceId" ColumnName="DeviceId" />
+          <ScalarProperty Name="ClientAuthenticationCode" ColumnName="ClientAuthenticationCode" />
+          <ScalarProperty Name="IMEINumber" ColumnName="IMEINumber" />
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ws_DeviceLocation">
+      <EntityTypeMapping TypeName="WatchUsModel.ws_DeviceLocation">
+        <MappingFragment StoreEntitySet="ws_DeviceLocation">
+          <ScalarProperty Name="DeviceId" ColumnName="DeviceId" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ws_Event">
+      <EntityTypeMapping TypeName="WatchUsModel.ws_Event">
+        <MappingFragment StoreEntitySet="ws_Event">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsQuickEvent" ColumnName="IsQuickEvent" />
+          <ScalarProperty Name="DestinationAddress" ColumnName="DestinationAddress" />
+          <ScalarProperty Name="ReminderTypeId" ColumnName="ReminderTypeId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="EventStateId" ColumnName="EventStateId" />
+          <ScalarProperty Name="EventTypeId" ColumnName="EventTypeId" />
+          <ScalarProperty Name="EventId" ColumnName="EventId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="InitiatorId" ColumnName="InitiatorId" />
+          <ScalarProperty Name="TrackingStateId" ColumnName="TrackingStateId" />
+          <ScalarProperty Name="TrackingStopTime" ColumnName="TrackingStopTime" />
+          <ScalarProperty Name="DestinationLatitude" ColumnName="DestinationLatitude" />
+          <ScalarProperty Name="DestinationLongitude" ColumnName="DestinationLongitude" />
+          <ScalarProperty Name="DestinationName" ColumnName="DestinationName" />
+          <ScalarProperty Name="IsTrackingRequired" ColumnName="IsTrackingRequired" />
+          <ScalarProperty Name="ReminderOffset" ColumnName="ReminderOffset" />
+          <ScalarProperty Name="TrackingStartOffset" ColumnName="TrackingStartOffset" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ws_mCountryDialingCodes">
+      <EntityTypeMapping TypeName="WatchUsModel.ws_mCountryDialingCodes">
+        <MappingFragment StoreEntitySet="ws_mCountryDialingCodes">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ws_UserAuthentication">
+      <EntityTypeMapping TypeName="WatchUsModel.ws_UserAuthentication">
+        <MappingFragment StoreEntitySet="ws_UserAuthentication">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Token" ColumnName="Token" />
+          <ScalarProperty Name="Salt" ColumnName="Salt" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastAccessedOn" ColumnName="LastAccessedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ws_UserEvent">
+      <EntityTypeMapping TypeName="WatchUsModel.ws_UserEvent">
+        <MappingFragment StoreEntitySet="ws_UserEvent">
+          <ScalarProperty Name="UserEventStateId" ColumnName="UserEventStateId" />
+          <ScalarProperty Name="EventAcceptanceStateId" ColumnName="EventAcceptanceStateId" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UserGroupId" ColumnName="UserGroupId" />
+          <ScalarProperty Name="UserEventEndTime" ColumnName="UserEventEndTime" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="EventId" ColumnName="EventId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="IsTrackingAccepted" ColumnName="IsTrackingAccepted" />
+          <ScalarProperty Name="TrackingStartTime" ColumnName="TrackingStartTime" />
+          <ScalarProperty Name="TrackingEndTime" ColumnName="TrackingEndTime" />
+          <ScalarProperty Name="TrackingEndReason" ColumnName="TrackingEndReason" />
+          <ScalarProperty Name="IsTrackingActive" ColumnName="IsTrackingActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ws_UserLocation">
+      <EntityTypeMapping TypeName="WatchUsModel.ws_UserLocation">
+        <MappingFragment StoreEntitySet="ws_UserLocation">
+          <ScalarProperty Name="LocationAddress" ColumnName="LocationAddress" />
+          <ScalarProperty Name="UserLocationId" ColumnName="UserLocationId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ETA" ColumnName="ETA" />
+          <ScalarProperty Name="ArrivalStatus" ColumnName="ArrivalStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ws_UserProfile">
+      <EntityTypeMapping TypeName="WatchUsModel.ws_UserProfile">
+        <MappingFragment StoreEntitySet="ws_UserProfile">
+          <ScalarProperty Name="GCMClientId" ColumnName="GCMClientId" />
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+          <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="ProfileName" ColumnName="ProfileName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="DeviceId" ColumnName="DeviceId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetCountryDialingCodes" FunctionName="WatchUsModel.Store.rs_spGetCountryDialingCodes">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WatchUsModel.rs_spGetCountryDialingCodes_Result">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AddEvent" FunctionName="WatchUsModel.Store.ws_spAddEvent" />
+    <FunctionImportMapping FunctionImportName="GetUserLocation" FunctionName="WatchUsModel.Store.ws_spGetUserLocation" />
+    <EntitySetMapping Name="ws_UserGroup">
+      <EntityTypeMapping TypeName="WatchUsModel.ws_UserGroup">
+        <MappingFragment StoreEntitySet="ws_UserGroup">
+          <ScalarProperty Name="GroupImageUrl" ColumnName="GroupImageUrl" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UserGroupName" ColumnName="UserGroupName" />
+          <ScalarProperty Name="UserGroupId" ColumnName="UserGroupId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ws_UserGroupMember">
+      <EntityTypeMapping TypeName="WatchUsModel.ws_UserGroupMember">
+        <MappingFragment StoreEntitySet="ws_UserGroupMember">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserGroupId" ColumnName="UserGroupId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="AddOrUpdateUserGroupMember" FunctionName="WatchUsModel.Store.ws_spAddOrUpdateUserGroupMember" />
+    <FunctionImportMapping FunctionImportName="AddUserGroup" FunctionName="WatchUsModel.Store.ws_spAddUserGroup" />
+    <FunctionImportMapping FunctionImportName="DeleteUserGroup" FunctionName="WatchUsModel.Store.ws_spDeleteUserGroup" />
+    <FunctionImportMapping FunctionImportName="UpdateUserGroup" FunctionName="WatchUsModel.Store.ws_spUpdateUserGroup" />
+    <FunctionImportMapping FunctionImportName="SyncUserGroupMembers" FunctionName="WatchUsModel.Store.ws_spSyncUserGroupMembers" />
+    <FunctionImportMapping FunctionImportName="GetAllEventsForUser" FunctionName="WatchUsModel.Store.ws_spGetAllEventsForUser" />
+    <FunctionImportMapping FunctionImportName="AddUserProfile" FunctionName="WatchUsModel.Store.ws_spAddUserProfile" />
+    <FunctionImportMapping FunctionImportName="SyncEventParticipants" FunctionName="WatchUsModel.Store.ws_spSyncEventParticipants" />
+    <FunctionImportMapping FunctionImportName="SyncUserGroupMember" FunctionName="WatchUsModel.Store.ws_spSyncUserGroupMember" />
+    <FunctionImportMapping FunctionImportName="UpdateUserProfile" FunctionName="WatchUsModel.Store.ws_spUpdateUserProfile" />
+    <EntitySetMapping Name="ws_EventStateLookup">
+      <EntityTypeMapping TypeName="WatchUsModel.ws_EventStateLookup">
+        <MappingFragment StoreEntitySet="ws_EventStateLookup">
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="EventState" ColumnName="EventState" />
+          <ScalarProperty Name="EventStateId" ColumnName="EventStateId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ws_EventTypeLookup">
+      <EntityTypeMapping TypeName="WatchUsModel.ws_EventTypeLookup">
+        <MappingFragment StoreEntitySet="ws_EventTypeLookup">
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="EventType" ColumnName="EventType" />
+          <ScalarProperty Name="EventTypeId" ColumnName="EventTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ws_TrackingStateLookup">
+      <EntityTypeMapping TypeName="WatchUsModel.ws_TrackingStateLookup">
+        <MappingFragment StoreEntitySet="ws_TrackingStateLookup">
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="TrackingState" ColumnName="TrackingState" />
+          <ScalarProperty Name="TrackingStateId" ColumnName="TrackingStateId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="LeaveUserGroup" FunctionName="WatchUsModel.Store.ws_spLeaveUserGroup" />
+    <FunctionImportMapping FunctionImportName="AddUserLocation" FunctionName="WatchUsModel.Store.ws_spAddUserLocation" />
+    <FunctionImportMapping FunctionImportName="RespondToEventInvite" FunctionName="WatchUsModel.Store.ws_spRespondToEventInvite" />
+    <FunctionImportMapping FunctionImportName="DeleteEvent" FunctionName="WatchUsModel.Store.ws_spDeleteEvent" />
+    <FunctionImportMapping FunctionImportName="GetRegisteredContacts" FunctionName="WatchUsModel.Store.ws_spGetRegisteredContacts" />
+    <FunctionImportMapping FunctionImportName="UpdateEvent" FunctionName="WatchUsModel.Store.ws_spUpdateEvent" />
+    <FunctionImportMapping FunctionImportName="GetUserCountryCode" FunctionName="WatchUsModel.Store.ws_spGetUserCountryCode" />
+    <FunctionImportMapping FunctionImportName="UpdateStatesForEvent" FunctionName="WatchUsModel.Store.ws_spUpdateStatesForEvent" />
+    <FunctionImportMapping FunctionImportName="ExtendEvent" FunctionName="WatchUsModel.Store.ws_spExtendEvent" />
+    <EntitySetMapping Name="ws_EventAcceptanceStateLookup">
+      <EntityTypeMapping TypeName="WatchUsModel.ws_EventAcceptanceStateLookup">
+        <MappingFragment StoreEntitySet="ws_EventAcceptanceStateLookup">
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="EventAcceptanceState" ColumnName="EventAcceptanceState" />
+          <ScalarProperty Name="EventAcceptanceStateId" ColumnName="EventAcceptanceStateId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="EndEvent" FunctionName="WatchUsModel.Store.ws_spEndEvent" />
+    <EntitySetMapping Name="ws_UserEventStateLookup">
+      <EntityTypeMapping TypeName="WatchUsModel.ws_UserEventStateLookup">
+        <MappingFragment StoreEntitySet="ws_UserEventStateLookup">
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="UserEventState" ColumnName="UserEventState" />
+          <ScalarProperty Name="UserEventStateId" ColumnName="UserEventStateId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="LeaveEvent" FunctionName="WatchUsModel.Store.ws_spLeaveEvent" />
+    <FunctionImportMapping FunctionImportName="GetEventsInternal" FunctionName="WatchUsModel.Store.ws_spGetAllEventsForUserInternal" />
+    <FunctionImportMapping FunctionImportName="GetUserGcmClientId" FunctionName="WatchUsModel.Store.ws_spGetUserGcmClientId" />
+    <EntitySetMapping Name="ws_UserFeedback">
+      <EntityTypeMapping TypeName="WatchUsModel.ws_UserFeedback">
+        <MappingFragment StoreEntitySet="ws_UserFeedback">
+          <ScalarProperty Name="UserEmailId" ColumnName="UserEmailId" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="FeedbackCategory" ColumnName="FeedbackCategory" />
+          <ScalarProperty Name="Feedback" ColumnName="Feedback" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserFeedbackId" ColumnName="UserFeedbackId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SaveUserFeedback" FunctionName="WatchUsModel.Store.ws_spAddUserFeedback" />
+    <FunctionImportMapping FunctionImportName="UpdateEventLocation" FunctionName="WatchUsModel.Store.ws_spUpdateEventLocation" />
+    <FunctionImportMapping FunctionImportName="GetGcmClientIdForMobile" FunctionName="WatchUsModel.Store.ws_spGetGcmClientIdForMobile" />
+  </EntityContainerMapping>
+</Mapping>

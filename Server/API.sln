@@ -1,0 +1,83 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatchUs.Common", "..\Common\Common\WatchUs.Common.csproj", "{2D419EB8-40F3-4FE3-A4C0-163C952FE772}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatchUs.Interface", "..\Common\Interface\WatchUs.Interface.csproj", "{6BA4355B-8880-4956-AF8C-552A26898F60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatchUs.Model", "..\Common\Modal\WatchUs.Model.csproj", "{5FA2A0DD-FF27-4DD6-A2F0-2E8320073523}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatchUs.Repository", "..\Repository\WatchUs.Repository.csproj", "{F747EAF6-715B-4394-99C7-A11FABFE46BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatchUs.AuthenticationManager", "..\Common\AuthenticationManager\WatchUs.AuthenticationManager.csproj", "{3A7BAF01-5C75-46E2-B05C-C78B312917AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatchUs.EncryptionManager", "..\Common\EncryptionManager\WatchUs.EncryptionManager.csproj", "{E1072BEE-4816-41C1-B016-C818BE330329}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatchUs.API", "API\WatchUs.API.csproj", "{431946EB-E06D-4BA7-BA33-721B98583DB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Watchus.GCMServer", "..\Common\Watchus.GCMServer\Watchus.GCMServer.csproj", "{E097EFE1-B095-444E-8ACC-85B5FCF84B86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Watchus.NotificationManager", "..\Common\Watchus.NotificationManager\Watchus.NotificationManager.csproj", "{91E79EF6-BCDD-49E8-8A76-A97E0EED80A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Watchus.SMSNotificationManager", "..\Common\Watchus.SMSNotificationManager\Watchus.SMSNotificationManager.csproj", "{84428D57-0A2F-43CD-88F3-0A0F05A83AA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Watchus.Geocoding", "..\Common\Watchus.Geocoding\Watchus.Geocoding.csproj", "{AC5010EF-1861-4724-8703-BF027F522E86}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6BA4355B-8880-4956-AF8C-552A26898F60} = {6BA4355B-8880-4956-AF8C-552A26898F60}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D419EB8-40F3-4FE3-A4C0-163C952FE772}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D419EB8-40F3-4FE3-A4C0-163C952FE772}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D419EB8-40F3-4FE3-A4C0-163C952FE772}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D419EB8-40F3-4FE3-A4C0-163C952FE772}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BA4355B-8880-4956-AF8C-552A26898F60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BA4355B-8880-4956-AF8C-552A26898F60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BA4355B-8880-4956-AF8C-552A26898F60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BA4355B-8880-4956-AF8C-552A26898F60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FA2A0DD-FF27-4DD6-A2F0-2E8320073523}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FA2A0DD-FF27-4DD6-A2F0-2E8320073523}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FA2A0DD-FF27-4DD6-A2F0-2E8320073523}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FA2A0DD-FF27-4DD6-A2F0-2E8320073523}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F747EAF6-715B-4394-99C7-A11FABFE46BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F747EAF6-715B-4394-99C7-A11FABFE46BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F747EAF6-715B-4394-99C7-A11FABFE46BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F747EAF6-715B-4394-99C7-A11FABFE46BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A7BAF01-5C75-46E2-B05C-C78B312917AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A7BAF01-5C75-46E2-B05C-C78B312917AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A7BAF01-5C75-46E2-B05C-C78B312917AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A7BAF01-5C75-46E2-B05C-C78B312917AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1072BEE-4816-41C1-B016-C818BE330329}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1072BEE-4816-41C1-B016-C818BE330329}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1072BEE-4816-41C1-B016-C818BE330329}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1072BEE-4816-41C1-B016-C818BE330329}.Release|Any CPU.Build.0 = Release|Any CPU
+		{431946EB-E06D-4BA7-BA33-721B98583DB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{431946EB-E06D-4BA7-BA33-721B98583DB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{431946EB-E06D-4BA7-BA33-721B98583DB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{431946EB-E06D-4BA7-BA33-721B98583DB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E097EFE1-B095-444E-8ACC-85B5FCF84B86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E097EFE1-B095-444E-8ACC-85B5FCF84B86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E097EFE1-B095-444E-8ACC-85B5FCF84B86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E097EFE1-B095-444E-8ACC-85B5FCF84B86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91E79EF6-BCDD-49E8-8A76-A97E0EED80A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91E79EF6-BCDD-49E8-8A76-A97E0EED80A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91E79EF6-BCDD-49E8-8A76-A97E0EED80A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91E79EF6-BCDD-49E8-8A76-A97E0EED80A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84428D57-0A2F-43CD-88F3-0A0F05A83AA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84428D57-0A2F-43CD-88F3-0A0F05A83AA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84428D57-0A2F-43CD-88F3-0A0F05A83AA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84428D57-0A2F-43CD-88F3-0A0F05A83AA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC5010EF-1861-4724-8703-BF027F522E86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC5010EF-1861-4724-8703-BF027F522E86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC5010EF-1861-4724-8703-BF027F522E86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC5010EF-1861-4724-8703-BF027F522E86}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
